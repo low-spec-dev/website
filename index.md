@@ -1,6 +1,3 @@
-theme: jekyll-theme-minima
----
-
 # Low-Spec Server Software
 
 The software industry is obsessed with "scale." Applications are built assuming millions
