@@ -42,3 +42,30 @@ deployment to "low spec" servers. This focus would lead to:
 
 Optimizing for lean, efficient server software benefits both your organization
 and your users *TODAY*.
+
+## Experience is key to adoption
+
+We can't just focus on code and technology, to be successful in these goals the
+server software MUST be easy to deploy and use. We have a few principles to
+simplify deployment of low-spec server software:
+
+1. **Single Binary**: The application should be a single binary, which can be
+   copied anywhere suitable for execution. No lengthy installs, multiple
+   configuration options, or need for a working docker setup.
+2. **Simple Upgrades**: With a single binary, updated software should just drop
+   in place and automatically perform any data migrations. Make it easy for your
+   users to stay secure.
+3. **Progressive Dependencies**: At a small scale, sqlite and a LRU cache in
+   memory can work wonders. A basic install should "just work" with some
+   reasonable defaults, as usage increases things can be scaled to external
+   services like PostgreSQL or redis caches.
+4. **Streamlined Setup**: Descriptive setup flows should be preferred to
+   unwieldly manual editing of config files.
+5. **Opt-in telemetry**: *NEVER* send data without positive confirmation first.
+6. **Hardware benchmarks**: Include performance benchmarks so that people know
+   what to expect for their available hardware and installation.
+
+Together these principles will ensure that people WANT to install low-spec
+server software that meets their needs. By making installation as easy and
+unsurprising as possible, we can make an impact to hopefully offset the
+extreme power usage caused by AI development and cryptocurrency projects.
